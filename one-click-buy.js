@@ -167,7 +167,7 @@ function init() {
         }
       }
     }
-    // xhr.send(formData);
+    xhr.send(formData);
   }
 
 }
