@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mug Helper</title>
+  <script src="mug-helper.js"></script>
+</head>
+
+<body>
+  <input type="text" placeholder="api key" id="inputApiKey" />
+  <input type="number" min="0" max="10" placeholder="Mug merits (0 to 10)" id="inputMugMerits" />
+  <button id="btnInit">init</button>
+  <div id="output">
+
+  </div>
+  <script>
+    const inputApiKey = document.getElementById('inputApiKey');
+    const inputMugMerits = document.getElementById('inputMugMerits');
+    const btnInit = document.getElementById('btnInit');
+    const output = document.getElementById('output');
+    btnInit.addEventListener('click', function () {
+      MugHelper.init(inputApiKey.value, inputMugMerits.value);
+      MugHelper.mug(output);
+    });
+  </script>
+</body>
+
+</html>
